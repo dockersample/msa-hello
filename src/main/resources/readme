@@ -1,0 +1,24 @@
+测试jar 是否可运行
+java -jar msa-api-hello-0.0.1-SNAPSHOT.jar
+
+创建Dockerfile文件
+vim Dockerfile 
+
+#构建镜像
+docker build -t daijinming/hello3 .
+
+#运行镜像
+docker run -d -p 81:8080 daijinming/hello3
+
+#重命名镜像标签
+docker tag 50884 127.0.0.1:5000/daijinming/hello3
+
+#推送到私有仓库
+#docker push 127.0.0.1:5000/daijinming/hello3
+
+#查看私有仓库中的镜像
+http://127.0.0.1:5000/v2/_catalog
+
+
+
+
